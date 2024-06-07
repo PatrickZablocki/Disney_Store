@@ -1,0 +1,78 @@
+.Navbar_container {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.Navbar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+li {
+    display: inline;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.225rem;
+}
+a:hover{
+    color: rgb(48, 141, 192);
+}
+.logo {
+    height: 40px;
+}
+.Navbar_links{
+    margin-left: 12px;
+}
+.left-ul{
+    margin-inline-start: 12px;
+}
+.right-ul {
+    margin-right: 50px;
+}
+.menu_icon {
+    display: none;
+    cursor: pointer;
+}
+/* Hier Arbeite ich an der Responsive Seite */
+@media screen and (max-width: 768px) {
+    .logo{
+        margin-left: 50px;
+    }
+    .menu_icon {
+        display: block;
+    }
+    .Navbar_container {
+        justify-content: flex-start;
+    }
+    .Navbar_links ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 32px;
+        background-color: #33333391;
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+    }
+    .Navbar_links.show ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .Navbar_links a{
+        font-weight: bolder;
+    }
+}
+
