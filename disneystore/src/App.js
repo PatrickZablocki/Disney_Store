@@ -1,6 +1,7 @@
 import styles from "./App.css";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
         <div className={styles.content}>
           <Routes>
             <Route path="/navbar" element={<Navbar />} />
-            {/* Fügen Sie eine Standardroute hinzu */}
+            <Route path="/home" element={<Home />} />
             <Route path="/" element={<Navigate to="/navbar" />} />
+            
           </Routes>
         </div>
       </div>
